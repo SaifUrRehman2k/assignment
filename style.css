@@ -8,16 +8,13 @@ body {
     font-weight: 500;
     overflow-x: hidden;
     font-family: sans-serif, Arial, Helvetica;
-    /* display: grid; */
-
-    
-    /* grid-template-areas: 
-    "head head head"
-    "hero hero hero"
-    "main main main"
-    "foot foot foot"    
-    ; */
-
+    h1,h2,h3,h4,h5,h6 {
+        font-family: advent;
+        
+    }
+    a {
+        transition: all 0.2s linear;
+    }
 
 }
 
@@ -25,13 +22,16 @@ body {
 :root {
     --primaryColor: rgb(52, 200, 245);
     --secondryColor: rgb(224, 113, 99);
-    --tertiaryColor: rgb(238, 230, 230);
+    --tertiaryColor: rgb(48, 47, 47);
+    --quaternary: rgba(252, 233, 233, 0.74) ;
 }
 
 * {
     text-decoration: none;
     color: black;
+    letter-spacing: 1px;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -130,12 +130,13 @@ nav {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 60vh;
     width: 100vw;
     font-family: advent;
     font-size: 1.5em;
     font-weight: 400;
     position: relative;
+    margin-bottom: 1em;
 }
 nav #linksSection {
     border: 1px solid rgb(0, 0, 0);
@@ -146,7 +147,7 @@ nav #linksSection {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 10%;
+    height: 15%;
     background-color: rgba(255,255,255,0.1);
     
     #navLinks {
@@ -159,7 +160,7 @@ nav #linksSection {
         a {
             font-weight: 600;
             color: white;
-            padding: 20px;
+            padding: 1em;
         }
         a:hover {
             color: var(--primaryColor);
@@ -217,14 +218,14 @@ nav #heroSection {
             h1 {
                 font-size: 3em;
                 line-height: 1em;
-                color: var(--tertiaryColor);
+                color: var(--quaternary);
                 /* border: 1px solid beige; */
                 /* text-shadow: 0px -1px black, 1px 0px black, 0px 1px black,-1px 0px black; */
                 margin: 3% 0% 2% 0%;
             }
             p {
                 font-size: 0.6em;
-                color: var(--tertiaryColor);
+                color: var(--quaternary);
                 /* text-shadow: 2px 2px 4px black; */
                 font-family: sans-serif;
                 padding: 0.2em;
@@ -247,6 +248,10 @@ nav #heroSection {
         }
     }
 }
+
+
+
+
                /* ----------sidebar----------- */
 div#sideBar {
     z-index: 999;
@@ -301,17 +306,225 @@ div#sideBar {
             justify-content: center;
             align-self: flex-end;
             margin-bottom: 2em;
+            /* border: none !important; */
             /* border-radius: 50%; */
         }
     }
+    
 
+}
+span {
+    border: none !important;
 }
 
 
+
+                /* --- main section ---- */
 
 main {
-    grid-area: "main";
+    width: 100vw;
+    height: 90vh;
+    /* background-color: bisque; */
 }
+/* section {
+    border: 1px solid black;
+} */
+div.container {
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+    /* background-color: cadetblue; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 3em;
+
+}
+
+section#iconSection {
+    grid-column: 1/4;
+    width: 100%;
+    /* height: 70%; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: first baseline;
+    justify-content: stretch;
+    h2 {
+        font-family: advent;
+        font-size: x-large;
+        text-transform: capitalize;
+        color: var(--tertiaryColor);
+    }
+    p {
+        font-family: salsa;
+        width: 90%;
+        color: rgb(97, 97, 97);
+    }
+    /* border: 0.5px solid #ccc; */
+
+}
+
+div.iconCard {
+    /* width: 22%; */
+    height: 90%;
+    width: 22%;
+    box-shadow: 1px 1px 1px #e9e9e9;
+    padding: 0.5em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    justify-content: space-evenly;
+    div.readMore {
+        /* background-color: tan; */
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: start;
+        a {
+            display: none;
+            color: var(--primaryColor);
+            transition: all 4s linear;
+            font-weight: 600;
+        }
+    }
+}
+
+div.iconCard:hover {
+    cursor: pointer;
+    div.readMore a {     
+        display: flex;
+        text-decoration: none;
+        transition: all 1s linear;
+    }
+}
+
+                    /* ------ featured section 1 ------ */
+
+section#featuredSection1 {
+    grid-column: 1/4;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    /* background-color: chocolate; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+div.sectionHeader {
+    /* background-color: rgb(16, 131, 231); */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    h1,a  {
+        /* padding: 0em 1em; */
+        font-family: advent;
+        font-weight: 500;
+        margin: 1%;
+    }
+    h1 {
+        font-size: xx-large;
+    }
+    a {
+        border: 2px solid var(--primaryColor);
+        padding: 0.4em 2em;
+    }
+    a:hover {
+        background-color: var(--primaryColor);
+        text-decoration: none;
+    }
+}
+div.Books {
+    height: 90%;
+    width: 100%;
+    margin: 1em auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.featuredBook {
+    width: 46%;
+    height: 80%;
+    /* box-shadow: 1px 1px 1px #e9e9e9; */
+    /* background-color: aqua; */
+    /* padding: 1em; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 0%;
+
+    div.bookImg {
+        width: 45%;
+        height: 100%;
+        background-color: rebeccapurple;
+        background-size: cover;
+        background-position: center;
+    }
+    div.bookDetails {
+        /* border: 1px solid black; */
+        width: 55%;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: start;
+        justify-content: center;
+        padding-left: 1em;
+        border: 1px solid rgb(172, 170, 170);
+        h3,p {
+            margin: 0.2em;
+        }
+        h3 {
+            font-size: x-large;
+            text-transform: capitalize;
+
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+        }
+        p.date {
+            color: var(--primaryColor);
+            font-size: 0.8em;
+        }
+    }
+    div.cosmosImg {
+        background-image: url(./assets/images/cosmos.jpg);
+    }
+    div.webDevImg {
+        background-image: url(./assets/images/webDev.jpg);
+    }
+}
+div.featuredBook:hover {
+    box-shadow: 5px 12px 15px rgba(44, 44, 44, 0.685);
+}
+
+
+
+
+#sec3 {
+    grid-area: "sec3";
+    grid-column: 1/4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
     grid-area: "foot";
 }
@@ -329,6 +542,30 @@ footer {
             /* border: 1px solid black; */
             gap: 2em;
             justify-content: center;
+        }
+    }
+
+    div#register {
+        font-family: advent;
+        font-size: 0.5em;
+        width: 30%;
+
+    }
+    div.headerContent2 {
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+        div#searchBar {
+            width: 80vw;
+            height: 1em !important;
+            div#pan {
+                height: 0.35em;
+                padding-left: 1px;
+                padding-right: 1px;
+            }
+            input {
+                width: 90%;
+            }
         }
     }
     nav {
@@ -372,8 +609,43 @@ footer {
     div#sideBar {
         display: none;
     }
+    section#iconSection {
+        margin-bottom: 5em;
+    }
+    div.iconCard {
+        width: 40%;
+        height: 50%;
+        margin: 0px auto;
+        p {
+            font-size: x-small;
+        }
+    }
+
+    div.sectionHeader {
+        padding-left: 0px;
+        margin-left: 0px;
+        h1 {
+            font-size: large;
+        }
+        a {
+            border: 2px solid var(--primaryColor);
+            padding: 0.1em 0.5em;
+        }
+    }
+    div.Books {
+        flex-flow: column wrap;
+        height: 50vh;
+        justify-content: space-around;
+        div.featuredBook {
+            height: 40%;
+            width: 100%;
+            margin-bottom: 0;
+            
+        }
+    }
 
 }
+
 @media (min-width: 768px) {
     nav {
         #linksSection {
