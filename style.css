@@ -17,6 +17,11 @@ body {
     }
 
 }
+.smallPara {
+    font-size: small;
+    font-weight: 100;
+    color: rgb(46, 45, 45);
+}
 
 
 :root {
@@ -330,20 +335,22 @@ main {
     border: 1px solid black;
 } */
 div.container {
-    width: 90%;
+    width: 100vw;
     height: 100%;
-    margin: 0px auto;
+    margin:  auto;
     /* background-color: cadetblue; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 3fr 3fr 2fr 2fr;
     gap: 3em;
+
 
 }
 
 section#iconSection {
     grid-column: 1/4;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     /* height: 70%; */
     /* border: 1px solid black; */
     display: flex;
@@ -356,11 +363,7 @@ section#iconSection {
         text-transform: capitalize;
         color: var(--tertiaryColor);
     }
-    p {
-        font-family: salsa;
-        width: 90%;
-        color: rgb(97, 97, 97);
-    }
+    
     /* border: 0.5px solid #ccc; */
 
 }
@@ -368,7 +371,7 @@ section#iconSection {
 div.iconCard {
     /* width: 22%; */
     height: 90%;
-    width: 22%;
+    width: 23%;
     box-shadow: 1px 1px 1px #e9e9e9;
     padding: 0.5em;
     display: flex;
@@ -403,7 +406,7 @@ div.iconCard:hover {
 
 section#featuredSection1 {
     grid-column: 1/4;
-    width: 90%;
+    width: 80%;
     height: 100%;
     margin: auto;
     /* background-color: chocolate; */
@@ -449,7 +452,7 @@ div.Books {
 
 div.featuredBook {
     width: 46%;
-    height: 80%;
+    height: 90%;
     /* box-shadow: 1px 1px 1px #e9e9e9; */
     /* background-color: aqua; */
     /* padding: 1em; */
@@ -471,18 +474,30 @@ div.featuredBook {
         width: 55%;
         height: 100%;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         align-items: start;
-        justify-content: center;
+        justify-content:  flex-start;
+        padding: 1em;
         padding-left: 1em;
+        box-sizing: border-box;
         border: 1px solid rgb(172, 170, 170);
         h3,p {
-            margin: 0.2em;
+            margin: 1%;
+            padding: 0%;
         }
         h3 {
             font-size: x-large;
             text-transform: capitalize;
 
+        }
+        h2 {
+            color: var(--secondryColor);
+            span {
+                color: gray;
+                text-decoration: line-through;
+                font-weight: 200;
+                font-size: 0.em;
+            }
         }
         p {
             font-family: Arial, Helvetica, sans-serif;
@@ -491,6 +506,26 @@ div.featuredBook {
         p.date {
             color: var(--primaryColor);
             font-size: 0.8em;
+        }
+        div.stars {
+            /* border: 1px solid black; */
+            display: flex ;
+            flex-flow: row  nowrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 70%;
+            height: 10%;
+            margin-bottom: 1em;
+            margin-left: 0.2em;
+            svg {
+                /* border: 1px solid black; */
+                width: 15px;
+                height: 15  
+            }
+            p {
+                /* border: 1px solid black; */
+                width: 100%;
+            }
         }
     }
     div.cosmosImg {
@@ -505,12 +540,149 @@ div.featuredBook:hover {
 }
 
 
+                        /* ------ about Section -------  */
 
-
-#sec3 {
-    grid-area: "sec3";
+/* section#aboutSection {
     grid-column: 1/4;
+    margin: auto;
+    width: 100%;
+    height: 60vh;
+    background-color: var(--quaternary);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    h1 {
+        font-size: 4em;
+        margin-bottom: 0%;
+        color: var(--primaryColor);
+    }
+    p {
+        width: 80%;
+    }
+    
+    div#aboutContent {
+        border: 1px solid black;
+        width: 40%;
+        height: 70%;
+        h1 {
+            margin-top: 0em;
+        }
+        div#Rating {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 0em;
+            h2 {
+                color: var(--secondryColor);
+                font-weight: 700;
+                font-size: xx-large;
+                margin-bottom: 0%;
+            }
+        }
+    }
+    div#aboutVideo {
+        width: 40%;
+        height: 70%;
+        background-image: url(./assets/images/Thumbnail.jpg);
+        background-color: aquamarine;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    div#playBtn {
+        width: 5em;
+        height: 5em;
+        background-color: var(--secondryColor);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        svg {
+            width: 30px ;
+            height: 30px;
+            padding: 0.8em;
+        }
+    }
+    div#playBtn:hover {
+        cursor: pointer;
+        background-color: var(--primaryColor);
+    }
+} */
+
+section#aboutSection {
+    grid-column: 1/4;
+    width: 100%;
+    height: 50vh;
+    background-color: var(--quaternary);
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    
+    div#aboutContent {
+        /* border: 1px solid black; */
+        width: 40%;
+        height: 80%;
+        h1 {
+            color: var(--primaryColor);
+            font-size: xx-large;
+            margin: 0%;
+        }
+        div#Rating {
+            /* border: 1px solid black; */
+            display: flex;
+            flex-flow: row wrap;
+            align-items: start;
+            justify-content: space-between;
+            height: 60%;
+            
+            h2  {
+                color: var(--primaryColor);
+                font-size: x-large;
+            }
+        }
+    }
+    div#aboutVideo {
+        /* border: 1px solid black; */
+        width: 40%;
+        height: 80%;
+        background-image: url(./assets/images/Thimbnail2.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        div#playBtn {
+            background-color: var(--secondryColor);
+            border-radius: 50%;
+            padding: 1em;
+            width: 2em;
+            height: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 40%;
+            left: -6%;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    
 }
+div#Rating>div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: start;
+    height: 90%;
+}
+
 
 
 
@@ -552,11 +724,11 @@ footer {
 
     }
     div.headerContent2 {
-        justify-content: space-between;
-        margin: 0px;
+        justify-content: space-around;
+        margin: 2px !important;
         padding: 0px;
         div#searchBar {
-            width: 80vw;
+            width: 40%;
             height: 1em !important;
             div#pan {
                 height: 0.35em;
@@ -611,14 +783,18 @@ footer {
     }
     section#iconSection {
         margin-bottom: 5em;
+        flex-flow: column;
     }
     div.iconCard {
-        width: 40%;
+        width: 100%;
         height: 50%;
         margin: 0px auto;
         p {
             font-size: x-small;
         }
+    }
+    div.featuredSection {
+        justify-content: space-around;
     }
 
     div.sectionHeader {
@@ -633,16 +809,31 @@ footer {
         }
     }
     div.Books {
-        flex-flow: column wrap;
-        height: 50vh;
-        justify-content: space-around;
+        flex-flow: column nowrap;
+        height: 100vh;
+        gap: 0.5em;
         div.featuredBook {
-            height: 40%;
+            height: 100%;
             width: 100%;
             margin-bottom: 0;
+            flex-flow: column wrap;
+            div.bookImg, div.bookDetails {
+                width: 100%;
+                height: 50%;
+            }
+
+            h1 {
+                margin-bottom: 0%;
+            }
+        }
+        div.stars {
+            /* background-color: yellowgreen; */
+            width: 100% !important;
             
         }
     }
+   
+
 
 }
 
