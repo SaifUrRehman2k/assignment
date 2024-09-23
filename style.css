@@ -1,8 +1,8 @@
 body {
     min-height: 100vh;
     min-width: 100vw;
-    margin: 0px;
-    padding: 0px;
+    margin: auto;
+    padding: 0em;
     font-family: advent;
     font-size: 0.9em;
     font-weight: 500;
@@ -65,6 +65,7 @@ header {
     justify-content: space-between;
     height: 45px;
     grid-area: "head";
+    width: 100%;
     /* background-color: blue; */
 
     div.headerContent1 {
@@ -341,7 +342,7 @@ div.container {
     /* background-color: cadetblue; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 3fr 3fr 2fr 2fr;
+    grid-template-rows: 3fr 3fr 2fr 2fr 3fr 3fr;
     gap: 3em;
 
 
@@ -542,76 +543,7 @@ div.featuredBook:hover {
 
                         /* ------ about Section -------  */
 
-/* section#aboutSection {
-    grid-column: 1/4;
-    margin: auto;
-    width: 100%;
-    height: 60vh;
-    background-color: var(--quaternary);
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    h1 {
-        font-size: 4em;
-        margin-bottom: 0%;
-        color: var(--primaryColor);
-    }
-    p {
-        width: 80%;
-    }
-    
-    div#aboutContent {
-        border: 1px solid black;
-        width: 40%;
-        height: 70%;
-        h1 {
-            margin-top: 0em;
-        }
-        div#Rating {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            padding: 0em;
-            h2 {
-                color: var(--secondryColor);
-                font-weight: 700;
-                font-size: xx-large;
-                margin-bottom: 0%;
-            }
-        }
-    }
-    div#aboutVideo {
-        width: 40%;
-        height: 70%;
-        background-image: url(./assets/images/Thumbnail.jpg);
-        background-color: aquamarine;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
 
-    div#playBtn {
-        width: 5em;
-        height: 5em;
-        background-color: var(--secondryColor);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        svg {
-            width: 30px ;
-            height: 30px;
-            padding: 0.8em;
-        }
-    }
-    div#playBtn:hover {
-        cursor: pointer;
-        background-color: var(--primaryColor);
-    }
-} */
 
 section#aboutSection {
     grid-column: 1/4;
@@ -684,6 +616,276 @@ div#Rating>div {
 }
 
 
+                    /* -------- featured section 2 ----------  */
+
+section#feturedSec {
+    grid-column: 1/4;
+    width: 100%;
+    /* background-color: var(--quaternary); */
+    height: 100vh;
+    margin-bottom: 10em;
+    div#btn {
+        width: 100%;
+        height: 6em;
+        /* background-color: rgb(25, 85, 138); */
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        a {
+            /* background-color: aqua; */
+            padding: 0.4em 1.4em;
+            border: 3px solid var(--primaryColor);
+        }
+        a:hover {
+            background-color: var(--primaryColor);
+            text-decoration: none;
+        }
+    }
+}
+div#featureHead {
+    width: 90%;
+    margin: auto;
+    height: 15%;
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+        color: var(--primaryColor);
+        font-size: 3em;
+        margin: 0%;
+    }
+    ul {
+        width: 50%;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 1px solid black; */
+    }
+    a {
+        padding: 1em;
+    }
+    a:hover {
+        text-decoration: none;
+        color: var(--secondryColor);
+        background-color: rgba(255,255,255,0.1);
+    }
+}
+
+div#booksCollection {
+    /* background-color: blue; */
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+div.bookCover {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    margin: 0%;
+    padding: 0%;
+}
+div.Image {
+    width: 100%;
+    height: 50%;
+    /* background-color: chartreuse; */
+    background-image: url(./assets/images/book.jpg);
+    background-size: cover;
+    background-position: left;
+}
+div.Details {
+    width: 100%;
+    height: 50%;
+    /* background-color: beige; */
+    padding: 1em;
+    box-sizing: border-box;
+    h3 {
+        font-size: x-large;
+        padding: 0%;
+        margin: 4% 0%;
+    }
+    p.author {
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 1em;
+        font-weight: 300;
+        color: var(--secondryColor);
+    }
+    /* display: flex;
+    flex-flow: column wrap; */
+}
+div.reviews {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+div.Rstar {
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+
+
+                        /* --------  News Section ------------  */
+
+section#newsSection {
+    grid-column: 1/4;
+    width: 100%;
+    height: 55em;
+    background-color: var(--quaternary);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    /* grid-template-areas: 
+    "newsHead newsHead newsHead"
+    "bNews bNews news"
+    "bNews bNews news"
+    ; */
+}
+                        /* ---- Header -----  */
+div#newsHead {
+    width: 90%;
+    height: 60%;
+    /* background-color: blue; */
+    margin: auto;
+    padding-bottom: 0%;
+    /* grid-area: "newsHead"; */
+    grid-column: 1/5;
+    h1 {
+        font-size: 4em;
+        color: var(--primaryColor);
+        
+    }
+}
+
+                        /* ----- Breaking news --------  */
+div#bNewsImg {
+    width: 90%;
+    height: 70%;
+    /* background-color: aqua; */
+    margin-left: auto;
+    background-image: url(./assets/images/collBooks.jpg);
+    background-size: cover;
+    background-position: center;
+}
+div#bNewsText {
+    width: 90%;
+    height: 30%;
+    /* background-color: rgb(1, 255, 86); */
+    margin-left: auto;
+    box-sizing: border-box;
+    border: 1px solid rgba(88, 88, 88, 0.527);
+
+    h2 {
+        margin: 0px;
+        font-size: xx-large;
+        padding: 0.5em 0.2em 0em 0.3em;
+        text-transform: capitalize;
+    }
+    
+}
+                        /* ----- commons (address) -------  */
+p.adress {
+    font-size: xx-small;
+    margin: 0px; 
+    padding: 0em;
+    color: rgb(68, 67, 67);
+    display: flex;
+    align-items: center
+}
+div.newsDate {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin: 1em;
+    /* border: 1px solid black; */
+}
+
+div#bNews {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    grid-column: 1/3;
+    grid-row: 2/4;
+    /* grid-area: "bNews"; */
+}
+
+
+                    /* --------- news section ---------  */
+div.news {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /* background-color: red; */
+    /* border: 1px solid black; */
+    grid-column: 3/5;
+    /* grid-area: "news"; */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.newsImg {
+    width: 30%;
+    height: 100%;
+    /* background-color: aqua; */
+
+}
+div.freeBooks {
+    background-image: url(./assets/images/Freebooks.jpg);
+    background-size: cover;
+    background-position: center;
+}
+div.library {
+    background-image: url(./assets/images/library.jpg);
+    background-size: cover;
+    background-position: center;
+}
+div.newsText {
+    border: 1px solid rgba(88, 88, 88, 0.527);
+    width: 60%;
+    height: 100%;
+    /* background-color: beige; */
+    margin-right: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+    justify-content: space-around;
+    div.newsDate {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0.5em;
+    }
+    h2 {
+        font-size: 1.5em;
+        text-transform: capitalize;
+        padding: 0em 0.5em 0em 1em;
+    }
+    .author > em {
+        padding-left: 1.5em;
+        color: var(--primaryColor);
+    }
+    .newsDetails {
+        padding: 1.5em;
+    }
+}
 
 
 
@@ -832,8 +1034,77 @@ footer {
             
         }
     }
-   
 
+    section#aboutSection {
+        width: auto;
+        height: 80vh;
+        flex-flow: column wrap;
+        div#aboutVideo {
+            width: 60%;
+            height: 30%;
+            margin-top: 4em;
+            div#playBtn {
+                left: 42%;
+            }
+        }
+        div#aboutContent {
+            justify-content: center;
+            padding: 0%;
+            margin: 0%;
+            width: 80%;
+            align-items: center;
+            height: 60%;
+            div#Rating {
+                margin: 0%;
+                padding: 0%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            div#Rating > div {
+                justify-content: first baseline;
+                align-items: start;
+                margin: 0px;
+                padding: 0%;
+            }
+        }
+    }
+   
+    div#featureHead {
+        ul {
+            margin: 0%;
+            width: 100%;
+            height:30%;
+            justify-content: start;
+            align-items: start;
+            border: 1px solid black;
+
+            li {
+                height: 1em;
+            }
+        }
+    }
+    section#feturedSec {
+        height: 160em;
+        gap: 2em;
+    }
+    div.bookCover {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        div.Image {
+            height: 40%;
+        }
+        div.Details {
+            height: 60%;
+        }
+    }
+
+    div#booksCollection {
+        height: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 
 }
 
